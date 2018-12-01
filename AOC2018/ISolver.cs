@@ -3,6 +3,7 @@
     public interface ISolver
     {
         string ProblemTitle { get; }
-        string Solve(string input);
+        string SolveA(string input);
+        string SolveB(string input);
     }
 }

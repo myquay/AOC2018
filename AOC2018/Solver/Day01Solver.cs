@@ -52,13 +52,14 @@ namespace AOC2018.Solver
         /// <returns></returns>
         private IEnumerable<int> TokenisedInputStream(string seedInput, bool repeat = false)
         {
-            var seedIntegers = seedInput.Split(new[] { Environment.NewLine, ", " }, StringSplitOptions.None)
-                .Select(s => s.StartsWith("+") ? int.Parse(new String(s.Skip(1).ToArray())) : -int.Parse(new String(s.Skip(1).ToArray())));
+            var parsedInput = seedInput
+                .Split(new[] { Environment.NewLine, ", " }, StringSplitOptions.None)
+                .Select(s => int.Parse(s));
 
             while (true)
             {
-                foreach (var integer in seedIntegers)
-                    yield return integer;
+                foreach (var item in parsedInput)
+                    yield return item;
 
                 if (!repeat)
                     break;

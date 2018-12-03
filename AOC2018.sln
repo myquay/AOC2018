@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOC2018", "AOC2018\AOC2018.csproj", "{6D9C9318-F65F-4344-9D66-AF851AF322BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AOC2018", "AOC2018\AOC2018.csproj", "{6D9C9318-F65F-4344-9D66-AF851AF322BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOC2018.Tests", "AOC2018.Tests\AOC2018.Tests.csproj", "{A920FC29-2A2A-4959-9E19-6D19F32A5D84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AOC2018.Tests", "AOC2018.Tests\AOC2018.Tests.csproj", "{A920FC29-2A2A-4959-9E19-6D19F32A5D84}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7223B886-F55A-4A6A-9D85-4B3AA49CC588}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

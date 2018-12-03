@@ -19,6 +19,7 @@ namespace AOC2018.Solver
         /// <returns></returns>
         public string SolveA(string input)
         {
+            //Sum all of the frequencies
             return $"{TokenisedInputStream(input).Sum()}";
         }
         
@@ -29,10 +30,11 @@ namespace AOC2018.Solver
         /// <returns></returns>
         public string SolveB(string input)
         {
-            //Frequencies
+            //Push the initial frequency (0)
             var results = new HashSet<int>(new[] { 0 });
             var currentFrequency = 0;
 
+            //Step through each frequency and use a hashmap to remember each frequency, break on collision
             foreach(var token in TokenisedInputStream(input, repeat: true))
             {
                 currentFrequency = currentFrequency + token;

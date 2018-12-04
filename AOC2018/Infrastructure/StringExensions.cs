@@ -8,5 +8,12 @@ namespace AOC2018
         {
             return Int32.TryParse(value, out int parsedValue);
         }
+
+        public static int? ToInt(this string value)
+        {
+            if (Int32.TryParse(value, out int parsedValue))
+                return parsedValue;
+            return null;
+        }
     }
 }

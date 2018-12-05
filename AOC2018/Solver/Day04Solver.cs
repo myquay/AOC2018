@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 namespace AOC2018.Solver
 {
     /// <summary>
-    /// Solution for the third day advent problem
+    /// Solution for the fourth day advent problem
     /// </summary>
     [AdventDay(day: 4)]
     public class Day04Solver : ISolver

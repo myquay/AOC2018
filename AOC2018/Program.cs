@@ -34,18 +34,25 @@ namespace AOC2018
                         if (allSolvers.ContainsKey(day))
                         {
                             Console.WriteLine($"Solution for {allSolvers[day].ProblemTitle}");
-                            var input = File.ReadAllText($"{Directory.GetCurrentDirectory()}/Input/input-a-{day:00}.txt");
+
+                            var input = File.Exists($"{Directory.GetCurrentDirectory()}/Input/input-a-{day:00}.txt") ?
+                                File.ReadAllText($"{Directory.GetCurrentDirectory()}/Input/input-a-{day:00}.txt") :
+                                File.ReadAllText($"{Directory.GetCurrentDirectory()}/Input/input-{day:00}.txt");
 
                             var stopwatch = Stopwatch.StartNew();
                             var result = allSolvers[day].SolveA(input);
                             stopwatch.Stop();
+
                             Console.WriteLine($"{result} - {stopwatch.ElapsedMilliseconds}ms");
                             
-                            input = File.ReadAllText($"{Directory.GetCurrentDirectory()}/Input/input-b-{day:00}.txt");
+                            input = File.Exists($"{Directory.GetCurrentDirectory()}/Input/input-b-{day:00}.txt") ?
+                                File.ReadAllText($"{Directory.GetCurrentDirectory()}/Input/input-b-{day:00}.txt") :
+                                File.ReadAllText($"{Directory.GetCurrentDirectory()}/Input/input-{day:00}.txt");
 
                             stopwatch = Stopwatch.StartNew();
                             result = allSolvers[day].SolveB(input);
                             stopwatch.Stop();
+
                             Console.WriteLine($"{result} - {stopwatch.ElapsedMilliseconds}ms");
                         }
                         else

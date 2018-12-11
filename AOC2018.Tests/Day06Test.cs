@@ -21,13 +21,12 @@ namespace AOC2018.Tests
             Assert.Equal(expectedResult, new Day06Solver().SolveA(input));
         }
         
-        //TODO: WITH THRESHOLD
-        //[Theory]
-        //[InlineData(INPUT, "4")]
-        //public void TestDay06PartBSolver(string input, string expectedResult)
-        //{
-        //    Assert.Equal(expectedResult, new Day06Solver().SolveB(input));
-        //}
-        
+        [Theory]
+        [InlineData(INPUT, "16")]
+        public void TestDay06PartBSolver(string input, string expectedResult)
+        {
+            Assert.Equal(expectedResult, new Day06Solver(safeZoneThreshold: 32).SolveB(input));
+        }
+
     }
 }

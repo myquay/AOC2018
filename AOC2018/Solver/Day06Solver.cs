@@ -11,7 +11,20 @@ namespace AOC2018.Solver
     [AdventDay(day: 6)]
     public class Day06Solver : ISolver
     {
-        private const int SAFE_ZONE_THRESHOLD = 10000;
+        private readonly int SAFE_ZONE_THRESHOLD = 10000;
+
+        /// <summary>
+        /// Default for input
+        /// </summary>
+        public Day06Solver() { }
+
+        /// <summary>
+        /// Configurable puzzel parameters
+        /// </summary>
+        /// <param name="safeZoneThreshold"></param>
+        public Day06Solver(int safeZoneThreshold) {
+            SAFE_ZONE_THRESHOLD = safeZoneThreshold;
+        }
 
         public string ProblemTitle => "Day 6: Chronal Coordinates";
         

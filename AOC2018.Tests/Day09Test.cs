@@ -5,7 +5,6 @@ namespace AOC2018.Tests
 {
     public class Day09Test
     {
-
         [Theory]
         [InlineData("9 players; last marble is worth 25 points", "32")]
         [InlineData("10 players; last marble is worth 1618 points", "8317")]
@@ -17,13 +16,5 @@ namespace AOC2018.Tests
         {
             Assert.Equal(expectedResult, new Day09Solver().SolveA(input));
         }
-
-        //[Theory]
-        //[InlineData("2 3 0 3 10 11 12 1 1 0 1 99 2 1 1 2", "66")]
-        //public void TestDay09PartBSolver(string input, string expectedResult)
-        //{
-        //    Assert.Equal(expectedResult, new Day09Solver().SolveB(input));
-        //}
-
     }
 }

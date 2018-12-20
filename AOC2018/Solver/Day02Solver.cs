@@ -35,7 +35,7 @@ namespace AOC2018.Solver
         public string SolveB(string input)
         {
             //Returns the hamming distance between two strings
-            int hamming(string x, string y) => x.Zip(y, (a,b) => a-b == 0 ? 0 : 1).Sum();
+            int hamming(string x, string y) => x.Zip(y, (a,b) => a == b ? 0 : 1).Sum();
 
             var candidates = input.Split(new[] { Environment.NewLine, ", " }, StringSplitOptions.None);
             var idsWithHammingOfOne = candidates

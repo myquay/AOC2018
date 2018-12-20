@@ -1,6 +1,5 @@
 ﻿using AOC2018.Solver.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -132,7 +131,7 @@ namespace AOC2018.Solver
         }
         
         /// <summary>
-        /// Calculate the winning score if 100x more marbles
+        /// Calculate the step the star message appears
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
